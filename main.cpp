@@ -16,9 +16,9 @@ string IntAddressToString(int*);
 int main(int argc, char** argv){
     int *cip, *cmask;
     try {
-        if (argc < 2)
+        if (argc <= 2) {
             throw runtime_error("The amount  of input arguments must be 2 or more");    
-        
+        }
         try {
             cip = ConvertStringToAddress(argv[1]);
             cmask = ConvertStringToAddress(argv[2]);
@@ -28,7 +28,7 @@ int main(int argc, char** argv){
         }
     }
     catch (exception e) {
-        cout << "Error: " << e.what() << endl;
+        cout << "Error: The input arguments are not correct" << endl;
     }
     EndTime();
 }

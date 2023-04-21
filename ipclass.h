@@ -17,7 +17,7 @@ class IpClass {
     }
 
     void getIpNetwork(){
-        cout << "hello work" << endl;
+        
     }
 
     
